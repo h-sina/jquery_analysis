@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="div1" miaov="妙" href="miaov.com"></div>
+  <script src="../jquery-2.0.3.js"></script>
+  <script>
+    /**
+        jQuery.fn.extend({
+          attr,
+          removeAttr,
+          prop,
+          removeProp,
+          addClass,
+          removeClass,
+          toggleClass,
+          hasClass,
+          val,
+        })
+        jQuery.extend({
+          attr,
+          removeAttr,
+          prop,
+          removeProp,
+        })
+     */
+
+    // $('.div1').attr('title', 'hello')
+    // console.log($('.div1').prop('miaov'))
+    // console.log($('.div1').attr('miaov'))
+    // console.log($('.div1').prop('href'))
+    // console.log($('.div1').attr('href'))
+
+
+    // $('.div1').attr('title', 'hello')
+    // $('.div1').removeAttr('title')
+    // alert($('.div1').attr('title'))
+
+    // $('.div1').prop('title', 'hello')
+    // $('.div1').removeProp('title')
+    // alert($('.div1').prop('title'))
+
+    // 此时attr==prop因为document不能设置attr 所以内部转prop处理
+    // $(document).attr('title', 'hello')
+
+
+  </script>
+</body>
+
+</html>

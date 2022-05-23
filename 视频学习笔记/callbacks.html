@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script src="../jquery-2.0.3.js"></script>
+  <script>
+    /**
+      2882行开始3066
+      once
+      memory
+      unique
+      stopOnFalse
+    */
+
+
+    /**
+      add
+      remove
+      has
+      empty
+      disable
+      disabled
+      lock
+      fireWith
+      fire
+      fired
+    */
+
+    function a () {
+      alert("a")
+    };
+    function b () {
+      alert("b")
+    }
+
+    // add 进行收集
+    // fire 对数组进行循环触发
+    // var cd = $.Callbacks();
+    // cd.add(a);
+    // (function () {
+    //   function b () {
+    //     alert("b")
+    //   }
+    //   cd.add(b)
+    // })();
+    // cd.fire();
+
+    // 只会弹出一次
+    // var cd = $.Callbacks('once');
+    // cd.add(a);
+    // cd.fire();
+    // cd.fire();
+
+    // memory作用在add上 所以add完b之后会执行fire() 结果就是弹出 a,b
+    // var cd = $.Callbacks('memory');
+    // cd.add(a);
+    // cd.fire();
+    // cd.add(b);
+
+
+    // 只会弹出一次 因为重复添加 作用在add 去重 重复的函数名不能重复添加
+    // var cd = $.Callbacks('unique');
+    // cd.add(a);
+    // cd.add(a);
+    // cd.fire();
+
+    // 弹出a 因为a有返回false 作用在for list的过程
+    // var cd = $.Callbacks('stopOnFalse');
+    // cd.add(a);
+    // cd.add(b);
+    // cd.fire();
+
+    // 弹出a,b 组合的方式 通过空格分割开
+    // var cd = $.Callbacks('once memory');
+    // cd.add(a);
+    // cd.fire();
+    // cd.add(b);
+    // cd.fire();
+
+    // 有参数走前面 无参数即undefined 走后面
+    // options = typeof options === "string" ?
+    //     (optionsCache[options] || createOptions(options)) :
+    //     jQuery.extend({}, options);
+
+    // $.Callbacks('once memory') ======>
+    // options: { once: true, memory: true }
+    // optionsCache: {
+    //   'once memory': { once: true, memory: true }
+    // }
+
+    // 因为add有对参数进行操作所以我们可以通过add(a,a,a)来添加
+    // jQuery.each(args, function (_, arg)
+
+    // fire其实是可以传参的
+    // function aa (n) {
+    //   alert('aa' + n)
+    // }
+    // function bb (n) {
+    //   alert('bb' + n)
+    // }
+    // var cd = $.Callbacks();
+    // cd.add(aa)
+    // cd.add(bb)
+    // cd.fire('hello')
+
+
+  </script>
+</body>
+
+</html>

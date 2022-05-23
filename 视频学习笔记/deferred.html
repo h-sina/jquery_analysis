@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script src="../jquery-2.0.3.js"></script>
+  <script>
+    /**
+        3067行开始-3207
+        jQuery.extend({
+          Deferred: function(){}
+          when: function(){}
+        })
+
+        $.Deferred()
+        $.when()
+      */
+    // 三种状态
+    // var cb = $.Callbacks()
+    // setTimeout(function () {
+    //   alert("111")
+    //   cb.fire();
+    // })
+    // cb.add(function () {
+    //   alert("222")
+    // })
+
+    // var cb = $.Deferred();
+    // setTimeout(function () {
+    //   alert("111")
+    //   cb.resolve();
+    // }, 1000);
+    // cb.done(function () {
+    //   alert("222")
+    // });
+
+    // var cb = $.Deferred();
+    // setTimeout(function () {
+    //   alert("111")
+    //   cb.reject();
+    // }, 1000);
+    // cb.progress(function () {
+    //   fail("222")
+    // });
+
+    // var cb = $.Deferred();
+    // setTimeout(function () {
+    //   alert("111")
+    //   cb.notify();
+    // }, 1000);
+    // cb.progress(function () {
+    //   alert("222")
+    // });
+    // 三种状态
+
+    // ajax
+    // $.ajax({
+    //   url: '',
+    //   success: function () { },
+    //   error: function () { }
+    // })
+    // $.ajax('xxx')
+    //   .done(function () { })
+    //   .fail(function () { })
+    // ajax
+
+    // 状态对应触发结果 once
+    // var cb = $.Deferred();
+    // setTimeout(function () {
+    //   // cb.reject();
+    //   cb.resolve();
+    // }, 1000);
+    // cb.fail(function () {
+    //   alert("fail")
+    // }).done(function () {
+    //   alert("done")
+    // })
+
+    // var cb = $.Deferred();
+    // setInterval(function () {
+    //   alert("111")
+    //   cb.resolve();
+    //   // cb.reject();
+    // }, 1000);
+    // cb.fail(function () {
+    //   alert("失败")
+    // }).done(function () {
+    //   alert("成功")
+    // }).progress(function () {
+    //   alert("进行中")
+    // })
+    // 状态对应触发结果 once
+
+    // 场景：首页动画特效
+
+    // function aaa()
+    // $.when().done(function () {
+    //   alert('成功')
+    // })
+
+    $.when(123, 456).done(function () {
+      alert(arguments[0])
+      alert(arguments[1])
+    })
+  </script>
+</body>
+
+</html>

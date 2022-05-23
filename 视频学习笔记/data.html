@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="div1" data-miaov="妙味"></div>
+
+  <script src="../jquery-2.0.3.js"></script>
+  <script>
+    /**
+        3324-
+        工具方法
+        jQuery.extend({
+          acceptData
+          hasData
+          data
+          removeData
+          _data
+          _removedata
+        })
+        实例方法
+        jQuery.fn.extend({
+          data
+          removeData
+        })
+        Data.prototype = {
+          key,
+          set,
+          get,
+          access,
+          remove,
+          hasData,
+          discard
+        }
+     */
+    // 原生
+    // document.getElementById('div1').setAttribute('name', 'sina')
+    // alert(document.getElementById('div1').getAttribute('name'))
+    // jQuery里
+    // $('#div1').attr('name', 'sina')
+    // alert($('#div1').attr('name'))
+    // $('#div1').prop('name', 'sina')
+    // alert($('#div1').prop('name'))
+    // $('#div1').data('name', 'sina')
+    // alert($('#div1').data('name'))
+
+    // DOM元素与对象之间互相引用 大部分浏览器会出现内存泄露
+    // var div1 = document.createElement('div1');
+    // var obj = {};
+    // div1.name = obj;
+    // obj.age = div1;
+
+    // $('div1').data('name', 'hello');
+    // $('div1').removeData('name');
+    // alert($('#div1').data('name'))
+    // $.data(document.body, 'name', 'hello')
+    // alert($.data('name'))
+
+    // var obj = { name: 'hello' };
+    // Object.freeze(obj);
+    // obj.name = 'hi';
+    // alert(obj.name);
+    // Object.defineProperty(obj, 0, {
+    //   get: function () {
+    //     return {}
+    //   }
+    // });
+    // alert(obj[0]);
+    // obj[0] = 123
+    // alert(obj[0]);
+
+    // $.data(document.body, 'name', 'sina')
+    // $.data(document.body, 'age', '13')
+
+    alert($('#div1').get(0).dataset.miaov)
+
+
+  </script>
+</body>
+
+</html>

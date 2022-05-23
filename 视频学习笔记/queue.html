@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="div1" style="background-color: red;width:100px;height:100px"></div>
+  <script src="../jquery-2.0.3.js"></script>
+  <script>
+    /**
+    jQuery.extend({
+      queue, ->push
+      dequeue,  ->shift
+      _queueHooks
+    })
+    jQuery.fn.extend({
+      queue,
+      dequeue,
+      delay,
+      clearQueue,
+      promise
+    })
+    */
+    // 队列存储的都是函数
+    $(function () {
+      function a () {
+        alert('a')
+      }
+      function b () {
+        alert('b')
+      }
+      // $.queue(document, 'q1', a);
+      // $.queue(document, 'q2', b);
+      // $.queue(document, 'q1', [a, b]);
+      // console.log($.queue(document, 'q1'))
+      // console.log($.queue(document, 'q2'))
+      // $.dequeue(document, 'q1')
+      // $.dequeue(document, 'q1')
+
+
+
+      // $(document).queue('q1', a);
+      // $(document).queue('q1', b);
+      // console.log($.queue(document, 'q1'))
+      // $(document).dequeue('q1');
+      // $(document).dequeue('q1');
+
+
+
+      // $(function () {
+      //   $('.div1').click(function () {
+      //     $(this).animate({ width: '300' }, 2000)
+      //     $(this).animate({ height: '300' }, 2000)
+      //     $(this).animate({ left: '300' }, 2000)
+      //   })
+      // })
+
+      // $(function () {
+      //   $('.div1').click(function () {
+      //     $(this).animate({ width: 300 }, 2000)
+      //       .queue('fx', function () {
+      //         $(this).dequeue()
+      //       })
+      //       .animate({ left: 400 }, 2000);
+      //   })
+      // })
+
+
+
+
+    })
+  </script>
+</body>
+
+</html>
